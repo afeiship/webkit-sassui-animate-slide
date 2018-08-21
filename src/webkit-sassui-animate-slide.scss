@@ -10,6 +10,7 @@ $webkit-sassui-animate-slide-options:(
   left: 0;
   backface-visibility: hidden;
   width: 100%;
+  box-sizing: border-box;
   transition: transform $duration,-webkit-transform $duration;
 
   //fullscreen:
