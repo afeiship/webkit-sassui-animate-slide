@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/webkit-sassui-animate-slide.css">
+</head>
+
+<body>
+    <div id="popup" data-direction='bottom' data-visible="true" style="height:200px; background: #f60" class="webkit-sassui-animate-slide"></div>
+
+
+    <button id='showBtn'>Show Popup</button>
+    <button id='hideBtn'>Hide Popup</button>
+
+    <script>
+        var el = document.getElementById('popup');
+        var showBtn = document.getElementById('showBtn');
+        var hideBtn = document.getElementById('hideBtn');
+
+        showBtn.onclick = function () {
+            el.setAttribute('data-visible', true);
+        }
+
+        hideBtn.onclick = function () {
+            el.setAttribute('data-visible', false);
+        }
+
+    </script>
+</body>
+
+</html>

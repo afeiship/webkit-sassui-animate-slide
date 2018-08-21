@@ -1,0 +1,29 @@
+{
+  "name": "webkit-sassui-animate-slide",
+  "description": "Slide in or out for webkit sass ui",
+  "main": [
+    "dist/webkit-sassui-animate-slide.css",
+    "dist/webkit-sassui-animate-slide.scss"
+  ],
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webkit",
+    "cssui",
+    "animate-slide"
+  ],
+  "homepage": "https://github.com/afeiship/webkit-sassui-animate-slide",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}

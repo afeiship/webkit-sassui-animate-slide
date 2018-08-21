@@ -1,0 +1,87 @@
+/*webkit-sassui-animate-slide Start*/
+$webkit-sassui-animate-slide-options:(
+  duration: 300ms,
+)!default;
+
+.webkit-sassui-animate-slide{
+
+  $duration: map-get($map: $webkit-sassui-animate-slide-options, $key: duration);
+  position: fixed;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  transition: transform $duration,-webkit-transform $duration;
+
+  //fullscreen:
+  &.fullscreen,
+  &[data-fullscreen=true]{
+    height:100%;
+  }
+
+  //popup from top:
+  &.direction-top,
+  &[data-direction=top]{
+    top: 0;
+
+    &.visible-false,
+    &[data-visible=false]{
+      transform: translateY(-100%);
+    }
+
+    &.visible-true,
+    &[data-visible=true]{
+      transform: translateY(0);
+    }
+  }
+
+  //popup from bottom:
+  &.direction-bottom,
+  &[data-direction=bottom]{
+    bottom:0;
+
+    &.visible-false,
+    &[data-visible=false]{
+      transform: translateY(100%);
+    }
+
+    &.visible-true,
+    &[data-visible=true]{
+      transform: translateY(0);
+    }
+  }
+
+
+  //popup from left:
+  &.direction-left,
+  &[data-direction=left]{
+    top: 0;
+    &.visible-false,
+    &[data-visible=false]{
+      transform: translateX(-100%);
+    }
+
+    &.visible-true,
+    &[data-visible=true]{
+      transform: translateX(0);
+    }
+  }
+
+
+  //popup from right:
+  &.direction-right,
+  &[data-direction=right]{
+    top: 0;
+
+    &.visible-false,
+    &[data-visible=false]{
+      transform: translateX(100%);
+    }
+
+    &.visible-true,
+    &[data-visible=true]{
+      transform: translateX(0);
+    }
+  }
+
+}
+/*webkit-sassui-animate-slide End*/
