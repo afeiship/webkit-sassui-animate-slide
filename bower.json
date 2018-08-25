@@ -1,9 +1,9 @@
 {
-  "name": "webkit-sassui-animate-slide",
+  "name": "webkit-sassui-popup",
   "description": "Slide in or out for webkit sass ui",
   "main": [
-    "dist/webkit-sassui-animate-slide.css",
-    "dist/webkit-sassui-animate-slide.scss"
+    "dist/webkit-sassui-popup.css",
+    "dist/webkit-sassui-popup.scss"
   ],
   "authors": [
     "afei"
@@ -14,7 +14,7 @@
     "cssui",
     "animate-slide"
   ],
-  "homepage": "https://github.com/afeiship/webkit-sassui-animate-slide",
+  "homepage": "https://github.com/afeiship/webkit-sassui-popup",
   "moduleType": [
     "amd"
   ],
