@@ -1,11 +1,11 @@
-/*webkit-sassui-animate-slide Start*/
-$webkit-sassui-animate-slide-options:(
+/*webkit-sassui-popup Start*/
+$webkit-sassui-popup-options:(
   duration: 300ms,
 )!default;
 
-.webkit-sassui-animate-slide{
+.webkit-sassui-popup{
 
-  $duration: map-get($map: $webkit-sassui-animate-slide-options, $key: duration);
+  $duration: map-get($map: $webkit-sassui-popup-options, $key: duration);
   position: fixed;
   left: 0;
   backface-visibility: hidden;
@@ -85,4 +85,4 @@ $webkit-sassui-animate-slide-options:(
   }
 
 }
-/*webkit-sassui-animate-slide End*/
+/*webkit-sassui-popup End*/
