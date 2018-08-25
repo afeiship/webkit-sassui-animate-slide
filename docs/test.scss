@@ -1,4 +1,7 @@
 @import "../dist/webkit-sassui-popup.scss";
+html,body{
+  height:100%;
+}
 .test-webkit-sassui-popup{
   border:1px solid red;
 }

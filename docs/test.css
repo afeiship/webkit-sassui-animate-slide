@@ -61,6 +61,10 @@
 }
 
 /*webkit-sassui-popup End*/
+html, body {
+  height: 100%;
+}
+
 .test-webkit-sassui-popup {
   border: 1px solid red;
 }
