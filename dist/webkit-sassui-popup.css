@@ -2,35 +2,25 @@
 .webkit-sassui-popup {
   position: fixed;
   left: 0;
+  bottom: 0;
   backface-visibility: hidden;
   width: 100%;
-  box-sizing: border-box;
-  transition: transform 300ms, -webkit-transform 300ms; }
-  .webkit-sassui-popup.fullscreen, .webkit-sassui-popup[data-fullscreen=true] {
-    height: 100%; }
-  .webkit-sassui-popup.direction-top, .webkit-sassui-popup[data-direction=top] {
-    top: 0; }
-    .webkit-sassui-popup.direction-top.visible-false, .webkit-sassui-popup.direction-top[data-visible=false], .webkit-sassui-popup[data-direction=top].visible-false, .webkit-sassui-popup[data-direction=top][data-visible=false] {
-      transform: translateY(-100%); }
-    .webkit-sassui-popup.direction-top.visible-true, .webkit-sassui-popup.direction-top[data-visible=true], .webkit-sassui-popup[data-direction=top].visible-true, .webkit-sassui-popup[data-direction=top][data-visible=true] {
-      transform: translateY(0); }
-  .webkit-sassui-popup.direction-bottom, .webkit-sassui-popup[data-direction=bottom] {
-    bottom: 0; }
-    .webkit-sassui-popup.direction-bottom.visible-false, .webkit-sassui-popup.direction-bottom[data-visible=false], .webkit-sassui-popup[data-direction=bottom].visible-false, .webkit-sassui-popup[data-direction=bottom][data-visible=false] {
-      transform: translateY(100%); }
-    .webkit-sassui-popup.direction-bottom.visible-true, .webkit-sassui-popup.direction-bottom[data-visible=true], .webkit-sassui-popup[data-direction=bottom].visible-true, .webkit-sassui-popup[data-direction=bottom][data-visible=true] {
-      transform: translateY(0); }
-  .webkit-sassui-popup.direction-left, .webkit-sassui-popup[data-direction=left] {
-    top: 0; }
-    .webkit-sassui-popup.direction-left.visible-false, .webkit-sassui-popup.direction-left[data-visible=false], .webkit-sassui-popup[data-direction=left].visible-false, .webkit-sassui-popup[data-direction=left][data-visible=false] {
-      transform: translateX(-100%); }
-    .webkit-sassui-popup.direction-left.visible-true, .webkit-sassui-popup.direction-left[data-visible=true], .webkit-sassui-popup[data-direction=left].visible-true, .webkit-sassui-popup[data-direction=left][data-visible=true] {
-      transform: translateX(0); }
-  .webkit-sassui-popup.direction-right, .webkit-sassui-popup[data-direction=right] {
-    top: 0; }
-    .webkit-sassui-popup.direction-right.visible-false, .webkit-sassui-popup.direction-right[data-visible=false], .webkit-sassui-popup[data-direction=right].visible-false, .webkit-sassui-popup[data-direction=right][data-visible=false] {
-      transform: translateX(100%); }
-    .webkit-sassui-popup.direction-right.visible-true, .webkit-sassui-popup.direction-right[data-visible=true], .webkit-sassui-popup[data-direction=right].visible-true, .webkit-sassui-popup[data-direction=right][data-visible=true] {
-      transform: translateX(0); }
+  box-sizing: border-box; }
+
+@keyframes webkit-sassui-popup-in {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(0); } }
+
+@keyframes webkit-sassui-popup-out {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(100%); } }
+  .webkit-sassui-popup.visible-true, .webkit-sassui-popup[data-visible="true"] {
+    animation: 300ms webkit-sassui-popup-in ease-in-out forwards; }
+  .webkit-sassui-popup.visible-false, .webkit-sassui-popup[data-visible="false"] {
+    animation: 300ms webkit-sassui-popup-out ease-in-out forwards; }
 
 /*webkit-sassui-popup End*/

@@ -1,88 +1,49 @@
 /*webkit-sassui-popup Start*/
-$webkit-sassui-popup-options:(
-  duration: 300ms,
-)!default;
+$webkit-sassui-popup-options: (
+  duration: 300ms
+) !default;
 
-.webkit-sassui-popup{
+.webkit-sassui-popup {
+  $duration: map-get(
+    $map: $webkit-sassui-popup-options,
+    $key: duration
+  );
 
-  $duration: map-get($map: $webkit-sassui-popup-options, $key: duration);
   position: fixed;
   left: 0;
+  bottom: 0;
   backface-visibility: hidden;
   width: 100%;
   box-sizing: border-box;
-  transition: transform $duration,-webkit-transform $duration;
 
-  //fullscreen:
-  &.fullscreen,
-  &[data-fullscreen=true]{
-    height:100%;
-  }
-
-  //popup from top:
-  &.direction-top,
-  &[data-direction=top]{
-    top: 0;
-
-    &.visible-false,
-    &[data-visible=false]{
-      transform: translateY(-100%);
-    }
-
-    &.visible-true,
-    &[data-visible=true]{
-      transform: translateY(0);
-    }
-  }
-
-  //popup from bottom:
-  &.direction-bottom,
-  &[data-direction=bottom]{
-    bottom:0;
-
-    &.visible-false,
-    &[data-visible=false]{
+  @keyframes webkit-sassui-popup-in {
+    from {
       transform: translateY(100%);
     }
 
-    &.visible-true,
-    &[data-visible=true]{
+    to {
       transform: translateY(0);
     }
   }
 
-
-  //popup from left:
-  &.direction-left,
-  &[data-direction=left]{
-    top: 0;
-    &.visible-false,
-    &[data-visible=false]{
-      transform: translateX(-100%);
+  @keyframes webkit-sassui-popup-out {
+    from {
+      transform: translateY(0);
     }
 
-    &.visible-true,
-    &[data-visible=true]{
-      transform: translateX(0);
+    to {
+      transform: translateY(100%);
     }
   }
 
-
-  //popup from right:
-  &.direction-right,
-  &[data-direction=right]{
-    top: 0;
-
-    &.visible-false,
-    &[data-visible=false]{
-      transform: translateX(100%);
-    }
-
-    &.visible-true,
-    &[data-visible=true]{
-      transform: translateX(0);
-    }
+  &.visible-true,
+  &[data-visible="true"] {
+    animation: $duration webkit-sassui-popup-in ease-in-out forwards;
   }
 
+  &.visible-false,
+  &[data-visible="false"] {
+    animation: $duration webkit-sassui-popup-out ease-in-out forwards;
+  }
 }
 /*webkit-sassui-popup End*/
