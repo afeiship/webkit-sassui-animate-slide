@@ -1,0 +1,39 @@
+/*wsui-popup Start*/
+$wsui-popup-options: (
+  duration: 300ms,
+) !default;
+
+.wsui-popup {
+  $duration: map-get(
+    $map: $wsui-popup-options,
+    $key: duration,
+  );
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  box-sizing: border-box;
+
+  @keyframes wsui-popup-in {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes wsui-popup-out {
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
+  }
+
+  &.visible-true,
+  &[data-visible="true"] {
+    animation: $duration wsui-popup-in ease-in-out forwards;
+  }
+
+  &.visible-false,
+  &[data-visible="false"] {
+    animation: $duration wsui-popup-out ease-in-out forwards;
+  }
+}
+/*wsui-popup End*/

@@ -1,0 +1,40 @@
+/*wsui-popup Start*/
+.wsui-popup {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@keyframes wsui-popup-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wsui-popup-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.wsui-popup.visible-true, .wsui-popup[data-visible="true"] {
+  animation: 300ms wsui-popup-in ease-in-out forwards;
+}
+
+.wsui-popup.visible-false, .wsui-popup[data-visible="false"] {
+  animation: 300ms wsui-popup-out ease-in-out forwards;
+}
+
+/*wsui-popup End*/
+.test-wsui-popup {
+  border: 1px solid red;
+}
